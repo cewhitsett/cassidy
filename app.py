@@ -19,9 +19,16 @@ def get_them():
 
 @app.route("/")
 def index():
-    print(showcase)
     return render_template("home.html",big=showcase[0],showcase=showcase[1:], others=others)
 
+@app.route("/home")
+def home():
+    return render_template("index.html",big=showcase[0],showcase=showcase[1:], others=others)
+
+@app.route("/home1")
+def homer():
+    return render_template("index2.html",big=showcase[0],showcase=showcase[1:], others=others)
+
+get_them()
 if __name__ == "__main__":
-    get_them()
-    app.run(debug=True)
+    app.run(debug=True,host="0.0.0.0")

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{{url_for('static',filename='favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{url_for('static',filename='favicon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Art by Cassidy Yueh</title>
+    <style>
+      #sidebarProfile {
+        background-color: #CCCCFF;
+        text-align: center;
+        padding: 48px 0;
+        box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+        height: 100vh;
+        color: #5B5FFF;
+        position: fixed;
+        bottom: 0;
+        height: 100vh;
+
+        padding-top: .5rem;
+        overflow-x: hidden;
+      }
+
+      #sidebarProfile > h2 {
+        text-decoration: underline;
+      }
+
+      body {
+        font-size: .875rem;
+        overflow-x:hidden;
+      }
+
+      #profilePic {
+        max-width: 80%;
+        max-height: 100%;
+        margin-bottom: 48px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #navbarList {
+        list-style: none;
+        padding: 0;
+        font-size: 1.875rem;
+      }
+
+      #navbarList > li > a {
+        color: white !important;
+        text-decoration-color: #5B5FFF;
+      }
+
+      .contentPage {
+        height: 100vh;
+      }
+      #navContainer {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .left-half{
+          height: 100%;
+          position: fixed;
+          bottom: 0;
+          height: 100vh;
+          background:#fff;
+      }
+      .left-half h2{
+          display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="container-fluid">
+      <div id="main" class="row">
+        <div class="col-md-3 col-sm-3 left-half ">
+          <p>Hey</p>
+        </div>
+        <div class="col-sm-9 col-md-9 pull-right">
+          <p>Bye</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          image: ""
+        },
+        methods: {
+          changeImage: function(s) {
+            this.image = s;
+          }
+        },
+        delimiters: ["[[","]]"]
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
